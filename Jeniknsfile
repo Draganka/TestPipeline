@@ -1,5 +1,15 @@
-node ('master'){
-  stage('test'){
-  git url: 'https://github.com/Draganka/Pipeline.git'
-  echo "done"
+pipeline {
+    agent {
+        docker {
+            image 'maven:3-alpine' 
+            args '-v /root/.m2:/root/.m2' 
+        }
+    }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
+    }
 }

@@ -6,5 +6,10 @@ pipeline {
         echo 'Dragana'
       }
     }
+    stage('Test') {
+      steps {
+        sh 'mvn test'
+      }
+    }
   }
 }

@@ -14,7 +14,7 @@ pipeline {
     }
     stage('JMeter test') {
       steps {
-        sh 'cd \\JMeter'
+        sh 'cd C:\\Users\\dragana.todorchevska\\.jenkins\\workspace\\TestPipeline_master-4JM27EXS2RGGKJ6BGNZQZX3EOXE2VOHVSFCSQFCNP2U7GIQZ6IFQ\\JMeter'
         bat 'ant -buildfile "build.xml"'
       }
     }

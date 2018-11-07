@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="2621" it="0" lt="2248" ct="2163" ts="1541520058948" s="true" lb="HTTP Request" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="72168" sby="386" ng="1" na="1">
+  <httpSample t="2258" it="0" lt="2248" ct="2163" ts="1541520058948" s="true" lb="https://mail.google.com/mail/u/1/#drafts" rc="302" rm="Moved Temporarily" tn="Thread Group 1-1" dt="text" by="1002" sby="127" ng="1" na="1"/>
+  <httpSample t="360" it="0" lt="295" ct="117" ts="1541520061209" s="true" lb="https://accounts.google.com/ServiceLogin?service=mail&amp;passive=true&amp;rm=false&amp;continue=https://mail.google.com/mail/&amp;ss=1&amp;scc=1&amp;ltmpl=default&amp;ltmplcache=2&amp;emr=1&amp;osid=1#" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="71166" sby="259" ng="1" na="1"/>
+</httpSample>
+<httpSample t="398" it="0" lt="77" ct="21" ts="1541520061580" s="true" lb="HTTP Request" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="72163" sby="455" ng="1" na="1">
+  <httpSample t="77" it="0" lt="77" ct="21" ts="1541520061580" s="true" lb="https://mail.google.com/mail/u/1/#sent?compose=new" rc="302" rm="Moved Temporarily" tn="Thread Group 1-1" dt="text" by="1002" sby="196" ng="1" na="1"/>
+  <httpSample t="321" it="0" lt="199" ct="0" ts="1541520061657" s="true" lb="https://accounts.google.com/ServiceLogin?service=mail&amp;passive=true&amp;rm=false&amp;continue=https://mail.google.com/mail/&amp;ss=1&amp;scc=1&amp;ltmpl=default&amp;ltmplcache=2&amp;emr=1&amp;osid=1#" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="71161" sby="259" ng="1" na="1"/>
+</httpSample>
+
+</testResults>

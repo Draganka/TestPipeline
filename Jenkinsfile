@@ -1,29 +1,29 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Start') {
       steps {
-        echo 'Dragana'
+        echo 'Start Execution.'
       }
     }
-    stage('Test') {
+    stage('Parallel Execution') {
       parallel {
-        stage('Test') {
+        stage('UI Test with Selenium') {
           steps {
             bat 'mvn test'
             echo 'Done!'
           }
         }
-        stage('JMeter test parallel') {
+        stage('API Test with JMeter') {
           steps {
             bat 'ant -buildfile "build.xml"'
           }
         }
       }
     }
-    stage('JMeter test') {
+    stage('End') {
       steps {
-        bat 'ant -buildfile "build.xml"'
+        echo 'Successfully finished!'
       }
     }
   }

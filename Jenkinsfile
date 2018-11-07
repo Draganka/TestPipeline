@@ -14,7 +14,7 @@ pipeline {
     }
     stage('JMeter test') {
       steps {
-        sh '$ cd /JMeter'
+        dir(path: 'JMeter')
         bat 'ant -buildfile "build.xml"'
       }
     }

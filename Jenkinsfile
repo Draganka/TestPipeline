@@ -7,9 +7,18 @@ pipeline {
       }
     }
     stage('Test') {
-      steps {
-        bat 'mvn test'
-        echo 'Done!'
+      parallel {
+        stage('Test') {
+          steps {
+            bat 'mvn test'
+            echo 'Done!'
+          }
+        }
+        stage('JMeter test parallel') {
+          steps {
+            bat 'ant -buildfile "build.xml"'
+          }
+        }
       }
     }
     stage('JMeter test') {

@@ -12,5 +12,10 @@ pipeline {
         echo 'Done!'
       }
     }
+    stage('JMeter test') {
+      steps {
+        bat 'ant -buildfile "build.xml"'
+      }
+    }
   }
 }

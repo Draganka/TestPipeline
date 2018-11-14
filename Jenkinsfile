@@ -17,6 +17,7 @@ pipeline {
         stage('API Test with JMeter') {
           steps {
             bat 'ant -buildfile "build.xml"'
+            echo 'Done!'
           }
         }
       }

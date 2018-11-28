@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Artifacts') {
           steps {
-            archiveArtifacts 'target/*.hpi, target/*.jpi'
+            archiveArtifacts 'target/*.xml'
           }
         }
         stage('Junit Report') {

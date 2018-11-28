@@ -20,6 +20,16 @@ pipeline {
             echo 'Done!'
           }
         }
+        stage('Artifacts') {
+          steps {
+            archiveArtifacts 'target/*.hpi, target/*.jpi'
+          }
+        }
+        stage('Junit Report') {
+          steps {
+            junit '**/surefire-reports/**/*.xml'
+          }
+        }
       }
     }
     stage('End') {

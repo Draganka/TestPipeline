@@ -20,25 +20,16 @@ pipeline {
             echo 'Done!'
           }
         }
+        stage('test report') {
+          steps {
+            junit 'target/surefire-reports/emailable-report.html'
+          }
+        }
       }
     }
     stage('End') {
-      parallel {
-        stage('End') {
-          steps {
-            echo 'Successfully finished!'
-          }
-        }
-        stage('Artifacts') {
-          steps {
-            junit '**/surefire-reports/**/*.xml'
-          }
-        }
-        stage('Junit report') {
-          steps {
-            archiveArtifacts '**/surefire-reports/**/*.xml'
-          }
-        }
+      steps {
+        echo 'Successfully finished!'
       }
     }
   }

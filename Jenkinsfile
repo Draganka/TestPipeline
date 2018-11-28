@@ -20,21 +20,25 @@ pipeline {
             echo 'Done!'
           }
         }
-        stage('Artifacts') {
+      }
+    }
+    stage('End') {
+      parallel {
+        stage('End') {
           steps {
-            archiveArtifacts 'target/*.xml'
+            echo 'Successfully finished!'
           }
         }
-        stage('Junit Report') {
+        stage('Artifacts') {
           steps {
             junit '**/surefire-reports/**/*.xml'
           }
         }
-      }
-    }
-    stage('End') {
-      steps {
-        echo 'Successfully finished!'
+        stage('Junit report') {
+          steps {
+            archiveArtifacts '**/surefire-reports/**/*.xml'
+          }
+        }
       }
     }
   }

@@ -22,7 +22,7 @@ pipeline {
         }
         stage('test report') {
           steps {
-            bat 'def reportPath = build.getWorkspace().child("target/surefire-reports/emailable-report.html") msg.setContent(reportPath.readToString(),"text/html");'
+            junit 'target/surefire-reports/emailable-report.html'
           }
         }
       }

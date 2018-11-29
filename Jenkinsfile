@@ -23,8 +23,17 @@ pipeline {
       }
     }
     stage('End') {
-      steps {
-        echo 'Successfully finished!'
+      parallel {
+        stage('End') {
+          steps {
+            echo 'Successfully finished!'
+          }
+        }
+        stage('html report') {
+          steps {
+            junit 'C:\\Users\\dragana.todorchevska\\workspace\\TestPipeline\\target\\surefire-reports\\emailable-report.hml'
+          }
+        }
       }
     }
   }

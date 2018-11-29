@@ -31,7 +31,7 @@ pipeline {
         }
         stage('html report') {
           steps {
-            junit 'C:\\Users\\dragana.todorchevska\\workspace\\TestPipeline\\target\\surefire-reports\\emailable-report.hml'
+            junit 'target/surefire-reports/junitreports/TEST-*.xml'
           }
         }
       }

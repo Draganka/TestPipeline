@@ -33,5 +33,10 @@ pipeline {
         bat 'ant -buildfile "build-junit_html_report.xml"'
       }
     }
+    stage('Send email with test results') {
+      steps {
+        mail(subject: 'Pipeline Test Results', body: 'test', to: 'dragana.todorchevska@interworks.com.mk')
+      }
+    }
   }
 }

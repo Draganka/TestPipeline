@@ -8,9 +8,9 @@ public class GooglePage {
 	
 	WebDriver driver;
 	
-	By searchBar = By.id("lst-ib");
+	public static By searchBar = By.xpath(".//*[@id='tsf']/div[2]/div/div[1]/div/div[1]/input");
 	public static By resultsPage = By.id("rso");
-	public static By googleLogo = By.id("logocont");
+	public static By googleLogo = By.id("logo");
 
 	public GooglePage(WebDriver driver) {
 		this.driver = driver;

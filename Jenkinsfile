@@ -4,7 +4,6 @@ pipeline {
     stage('Start') {
       steps {
         echo 'Start Execution.'
-        bat 'mvn clean'
       }
     }
     stage('Parallel Execution') {
@@ -23,18 +22,14 @@ pipeline {
         }
       }
     }
-    stage('End') {
-      parallel {
-        stage('End') {
-          steps {
-            echo 'Successfully finished!'
-          }
-        }
-        stage('html report') {
-          steps {
-            junit 'target/surefire-reports/testng-junit-results/junitreports/TEST-*.xml'
-          }
-        }
+    stage('Result Report UI') {
+      steps {
+        junit 'target/surefire-reports/junitreports/TEST-*.xml'
+      }
+    }
+    stage('Convert results in HTML') {
+      steps {
+        bat 'ant -buildfile "build-junit_html_report.xml"'
       }
     }
   }

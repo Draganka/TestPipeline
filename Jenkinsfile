@@ -25,7 +25,7 @@ pipeline {
     }
     stage('Result Report UI') {
       steps {
-        junit 'target/surefire-reports/junitreports/TEST-*.xml'
+        junit 'target/surefire-reports/testng-junit-results/junitreports/TEST-*.xml'
       }
     }
     stage('Convert results in HTML') {

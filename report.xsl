@@ -7,7 +7,7 @@
   
   <xsl:output method="html" indent="yes" encoding="UTF-8" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN" />
   <xsl:decimal-format decimal-separator="." grouping-separator="," />
-  <xsl:param name="TITLE">Mobile Automation Test Results</xsl:param>
+  <xsl:param name="TITLE">Selenium Test Results</xsl:param>
   <xsl:param name="NOW"><xsl:value-of select="java:format(java:java.text.SimpleDateFormat.new('yyyy-MM-dd HH:mm:ss'), java:java.util.Date.new())" /></xsl:param>
 
   <xsl:template match="testsuites">

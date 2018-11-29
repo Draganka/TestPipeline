@@ -4,6 +4,7 @@ pipeline {
     stage('Start') {
       steps {
         echo 'Start Execution.'
+        bat 'mvn clean'
       }
     }
     stage('Parallel Execution') {

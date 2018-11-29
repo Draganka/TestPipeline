@@ -5,7 +5,7 @@
     <classes>
       <class name="com.G.P.Google.Pipeline.GoogleTest">
         <methods>
-          <include name="alo"/>
+          <include name="google"/>
         </methods>
       </class> <!-- com.G.P.Google.Pipeline.GoogleTest -->
     </classes>

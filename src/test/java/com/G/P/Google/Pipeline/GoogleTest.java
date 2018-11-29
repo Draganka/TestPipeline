@@ -18,19 +18,18 @@ WebDriver driver;
 	  WebDriver driver = new ChromeDriver();
 	  driver.manage().window().maximize();
 	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	  driver.get("http://www.google.com");
+	  driver.get("http://www.automationpractice.com");
 		
+	  assertTrue(driver
+				.findElement(Page.womenButton).isDisplayed());
 		
-		GooglePage gp = new GooglePage(driver);
+		Page gp = new Page(driver);
 		gp.clickSearchBar();
 		gp.enterValueInSearchBar();
 		
 		assertTrue(driver
-				.findElement(GooglePage.resultsPage).isDisplayed());
+				.findElement(Page.searchAssertion).isDisplayed());
 		
-		
-		assertTrue(driver
-				.findElement(GooglePage.googleLogo).isDisplayed());
 		
 	}
 }

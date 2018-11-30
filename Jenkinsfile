@@ -23,12 +23,12 @@ pipeline {
         }
       }
     }
-    stage('Result Report UI') {
+    stage('.xml Result Report ') {
       steps {
         junit 'target/surefire-reports/testng-junit-results/junitreports/TEST-*.xml'
       }
     }
-    stage('Convert results in HTML') {
+    stage('Convert .xml results in HTML') {
       steps {
         bat 'ant -buildfile "build-junit_html_report.xml"'
       }

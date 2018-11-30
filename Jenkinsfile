@@ -36,6 +36,7 @@ pipeline {
     stage('Send email with test results') {
       steps {
         mail(subject: 'Pipeline Test Results', body: '${FILE,path="target/surefire-reports/testng-junit-results/junitreports/html/finalreport/TESTS-TestSuites.html"}', to: 'dragana.todorchevska@interworks.com.mk')
+        emailext(subject: 'Pipeline Test Results', body: '${FILE,path="target/surefire-reports/testng-junit-results/junitreports/html/finalreport/TESTS-TestSuites.html"} <br> ${FILE,path="results/html/JMeterTest.html"}', to: 'dragana.todorchevska@interworks.com.mk')
       }
     }
   }

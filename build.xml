@@ -24,6 +24,8 @@
        resultlogdir="results/jtl">
 
 			<testplans dir="${basedir}" includes="JMeterTest.jmx"/>
+			<testplans dir="${basedir}" includes="Test_Plan2.jmx"/>
+			<testplans dir="${basedir}" includes="Test_Plan3.jmx"/>
 			<property name="jmeter.save.saveservice.output_format" value="xml"/>
 			<jvmarg value="-Xmx1536m"/>
 		</jmeter>

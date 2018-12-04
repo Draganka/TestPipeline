@@ -1,8 +1,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Selenium Suite" >
-  <test name="Selenium Tests" >
+  <test name="GoogleTest" >
     <packages>
       <package name="com.G.P.Google.Pipeline.GoogleTest" />
+    </packages>
+ </test>
+   <test name="AddItemToCartTest" >
+    <packages>
+      <package name="com.G.P.Google.Pipeline.AddItemToCartTest" />
+    </packages>
+ </test>
+   <test name="ProceedToCheckoutTest" >
+    <packages>
+      <package name="com.G.P.Google.Pipeline.ProceedToCheckoutTest" />
     </packages>
  </test>
 </suite>

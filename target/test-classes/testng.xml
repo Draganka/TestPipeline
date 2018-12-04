@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Selenium Suite" >
-  <test name="Selenium Tests" >
-    <packages>
-      <package name="com.G.P.Google.Pipeline.GoogleTest" />
-    </packages>
- </test>
-</suite>

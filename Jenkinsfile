@@ -37,7 +37,7 @@ pipeline {
       parallel {
         stage('Send email with test results - Selenium') {
           steps {
-            emailext(subject: 'Pipeline Test Results -Selenium', body: '${FILE,path="target/surefire-reports/testng-junit-results/junitreports/html/finalreport/TESTS-TestSuites.html"} <br>', to: 'dragana.todorchevska@interworks.com.mk')
+            emailext(subject: 'Pipeline Test Results -Selenium', body: '${FILE,path="target/surefire-reports/Selenium Suite/html/finalreport/TESTS-TestSuites.html"}', to: 'dragana.todorchevska@interworks.com.mk')
           }
         }
         stage('Send email with test results - JMeter') {

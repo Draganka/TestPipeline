@@ -2,18 +2,18 @@
 <project name="mobile_Automation_GC" default="main" basedir=".">
 
 	<target name="report1">
-		<junitreport todir="target/surefire-reports/testng-junit-results/junitreports">
-			<fileset dir="target/surefire-reports/testng-junit-results/junitreports">
+		<junitreport todir="target/surefire-reports/Selenium Suite">
+			<fileset dir="target/surefire-reports/Selenium Suite">
 				<include name="**/TEST-*.xml"/>
 			</fileset>
-			<report format="noframes" todir="${basedir}\target\surefire-reports\testng-junit-results\junitreports\html"/>
+			<report format="noframes" todir="${basedir}\target\surefire-reports\Selenium Suite\html"/>
 		</junitreport>
 	</target>
 
 	<target name="report2" depends="report1">
 		<xslt
-		       basedir="${basedir}\target\surefire-reports\testng-junit-results\junitreports"
-		       destdir="${basedir}\target\surefire-reports\testng-junit-results\junitreports\html\finalreport"
+		       basedir="${basedir}\target\surefire-reports\Selenium Suite"
+		       destdir="${basedir}\target\surefire-reports\Selenium Suite\html\finalreport"
 		       includes="*.xml"
 		       style="${basedir}\report.xsl"/>
 	</target>

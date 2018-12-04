@@ -34,8 +34,17 @@ pipeline {
       }
     }
     stage('Send email with test results') {
-      steps {
-        emailext(subject: 'Pipeline Test Results', body: '${FILE,path="target/surefire-reports/testng-junit-results/junitreports/html/finalreport/TESTS-TestSuites.html"} <br><h1>JMeter Test Results</h1><br> ${FILE,path="results/html/JMeterResults.html"}', to: 'dragana.todorchevska@interworks.com.mk')
+      parallel {
+        stage('Send email with test results - Selenium') {
+          steps {
+            emailext(subject: 'Pipeline Test Results -Selenium', body: '${FILE,path="target/surefire-reports/testng-junit-results/junitreports/html/finalreport/TESTS-TestSuites.html"} <br>', to: 'dragana.todorchevska@interworks.com.mk')
+          }
+        }
+        stage('Send email with test results - JMeter') {
+          steps {
+            emailext(subject: 'Send email with test results - JMeter', body: '<h1>JMeter Test Results</h1><br> ${FILE,path="results/html/JMeterResults.html"}', to: 'dragana.todorchevska@interworks.com.mk')
+          }
+        }
       }
     }
   }

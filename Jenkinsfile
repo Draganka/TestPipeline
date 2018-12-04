@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('UI Test with Selenium') {
           steps {
-            bat 'mvn test'
+            bat 'mvn test -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml'
             echo 'Done!'
           }
         }

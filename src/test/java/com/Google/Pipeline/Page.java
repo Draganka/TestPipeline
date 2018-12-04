@@ -1,4 +1,4 @@
-package com.G.P.Google.Pipeline;
+package com.Google.Pipeline;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

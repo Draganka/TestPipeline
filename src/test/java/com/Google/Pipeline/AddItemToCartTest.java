@@ -1,4 +1,4 @@
-package com.G.P.Google.Pipeline;
+package com.Google.Pipeline;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;

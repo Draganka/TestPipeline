@@ -10,14 +10,14 @@
     </path>
 
 	<target name="run-functional-tests">
-	  <delete file="${basedir}\JMeterResults.xml" quiet="true" failonerror="false"/>
-	  <delete file="${basedir}\JMeterResults.html" quiet="true" failonerror="false"/>
+	  <delete file="${basedir}\results\jtl\JMeterResults.xml" quiet="true" failonerror="false"/>
+	  <delete file="${basedir}\results\html\JMeterResults.html" quiet="true" failonerror="false"/>
 	  <!--<delete dir="${target.dir}" quiet="true" failonerror="false"/>-->
 	  <taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" classpathref="jmeter.path" />
 	  <echo message="Running functional tests in testing.xml" />
 	  <jmeter
 	    jmeterhome="${jmeter.home}"
-		resultlog="${basedir}\JMeterResults.xml">
+		resultlog="${basedir}\results\jtl\JMeterResults.xml">
 		<testplans dir="${basedir}" includes="OMS_Automation_All.jmx"/>
 		<jvmarg value="-Xincgc"/>
 		<jvmarg value="-Xmx2048m"/>
@@ -29,12 +29,12 @@
 		<testplans dir="${basedir}" includes="Test_Plan2.jmx"/>
 		<testplans dir="${basedir}" includes="Test_Plan3.jmx"/>
 	  </jmeter>
-	  <xslt in="${basedir}\JMeterResults.xml"
-	    out="${basedir}\JMeterResults.html"
+	  <xslt in="${basedir}\results\jtl\JMeterResults.xml"
+	    out="${basedir}\results\html\JMeterResults.html"
 		style="${basedir}\jmeter-results-detail-report_21_functional.xsl"/>
 		<echo message="Waiting is started." />
 		<waitfor maxwait="100" maxwaitunit="second">
-			<available file="${basedir}\JMeterResults.html"/>
+			<available file="${basedir}\results\html\JMeterResults.html"/>
 		</waitfor>
 		<echo message="Waiting end." />
 	</target>

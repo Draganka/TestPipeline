@@ -47,5 +47,10 @@ pipeline {
         }
       }
     }
+    stage('End') {
+      steps {
+        echo 'Blue Ocean Pipeline is executed successfully!'
+      }
+    }
   }
 }

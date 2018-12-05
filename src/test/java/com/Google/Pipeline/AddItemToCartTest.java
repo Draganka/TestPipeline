@@ -14,7 +14,7 @@ public class AddItemToCartTest {
 	WebDriver driver;
 
 	@Test
-	public void google() throws InterruptedException{
+	public void AddItemToCart() throws InterruptedException{
 		
 	 System.setProperty("webdriver.chrome.driver", "D:\\driver\\chromedriverNew.exe");
 	  WebDriver driver = new ChromeDriver();

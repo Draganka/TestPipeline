@@ -7,12 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class GoogleTest {
+public class SearchItemTest {
 	
 WebDriver driver;
 
 	@Test
-	public void google(){
+	public void SearchItem(){
 		
 	 System.setProperty("webdriver.chrome.driver", "D:\\driver\\chromedriverNew.exe");
 	  WebDriver driver = new ChromeDriver();

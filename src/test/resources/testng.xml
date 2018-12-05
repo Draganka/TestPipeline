@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Selenium Suite" >
-  <test name="GoogleTest" >
+  <test name="SearchItemTest" >
     <classes>
-      <class name="com.Google.Pipeline.GoogleTest" />
+      <class name="com.Google.Pipeline.SearchItemTest" />
     </classes>
  </test>
  <test name="AddItemToCartTest" >

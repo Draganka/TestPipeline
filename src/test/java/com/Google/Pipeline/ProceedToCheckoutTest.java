@@ -14,7 +14,7 @@ public class ProceedToCheckoutTest {
 	WebDriver driver;
 
 	@Test
-	public void google() throws InterruptedException {
+	public void ProceedToCheckout() throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver",
 				"D:\\driver\\chromedriverNew.exe");

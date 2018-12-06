@@ -90,7 +90,7 @@
 
 <xsl:template name="summary">
 	<h3>Summary</h3>
-	<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+	<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 		<tr valign="top">
 			<th># Samples</th>
 			<th>Success Rate</th>
@@ -147,7 +147,7 @@
 </xsl:template>
 <xsl:template name="pagelist">
 	<h3>Results per transaction</h3>
-	<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+	<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 		<tr valign="top">
 			<th>Transaction Controller</th>
 			<th># Samples</th>
@@ -230,7 +230,7 @@
 			<xsl:if test="$failureCount > 0">
 				<h3><xsl:value-of select="@lb" /></h3>
 
-				<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+				<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 				<tr valign="top">
 					<th>Response</th>
 					<th>Failure Message</th>

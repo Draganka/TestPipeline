@@ -33,7 +33,7 @@
 <xsl:template match="testResults">
 	<html>
 		<head>
-			<title>API Test Results</title>
+			<title>Functional Test Results</title>
 			<style type="text/css">
 				body {
 					font:normal 80% verdana,arial,helvetica;

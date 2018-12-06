@@ -8,7 +8,7 @@
   <xsl:output method="html" indent="yes" encoding="UTF-8" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN" />
   <xsl:decimal-format decimal-separator="." grouping-separator="," />
   <xsl:param name="TITLE">Selenium Test Results</xsl:param>
-  <xsl:param name="NOW"><xsl:value-of select="java:format(java:java.text.SimpleDateFormat.new('yyyy-MM-dd HH:mm:ss'), java:java.util.Date.new())" /></xsl:param>
+<!--  <xsl:param name="NOW"><xsl:value-of select="java:format(java:java.text.SimpleDateFormat.new('yyyy-MM-dd HH:mm:ss'), java:java.util.Date.new())" /></xsl:param>-->
 
   <xsl:template match="testsuites">
     <html>
@@ -17,46 +17,37 @@
           <xsl:value-of select="$TITLE" />
         </title>
         <style type="text/css">
-          body {
-            font-family: verdana,arial,helvetica;
-            color: #000000;
-            margin: 20px;
-          }
-          #title {
-            margin-bottom: 30px;   
-          }
-          table.details tr th{
-            font-weight: bold;
-            text-align: left;
-            background: #a6caf0;
-          }
-          table.details tr td{
-            background: #eeeee0;
-          }
-          p {
-            line-height: 1.5em;
-            margin-top: 0.5em;
-            margin-bottom: 1.0em;
-          }
-          h1 {
-            margin: 0px 0px 5px;
-          }
-          h2 {
-            margin-top: 1em;
-            margin-bottom: 0.5em;
-          }
-          h3, h4, h5, h6 {
-            margin-bottom: 0.5em;
-          }
-          .Error {
-            font-weight: bold;
-            color: red;
-          }
-          .Failure {
-            font-weight: bold;
-            color: purple;
-          }
-        </style>
+				body {
+					font:normal 80% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 80%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+					white-space: nowrap;
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+			</style>
         <script type="text/javascript" language="JavaScript"><![CDATA[
         function foo() {}
       ]]>
@@ -193,22 +184,11 @@
 
       </tr>
     </table>
-    <table border="0">
-      <tr>
-        <td style="text-align: justify;">
-          Note:
-          <i>failures</i>
-          are anticipated and checked for with assertions while
-          <i>errors</i>
-          are unanticipated.
-        </td>
-      </tr>
-    </table>
   </xsl:template>
 
   <!-- Page HEADER -->
   <xsl:template name="pageHeader">
-    <h1 id="title"><xsl:value-of select="$TITLE" /> from <xsl:value-of select="$NOW" /></h1>
+    <h1 id="title"><xsl:value-of select="$TITLE" /> </h1>
     <hr size="1" />
   </xsl:template>
 

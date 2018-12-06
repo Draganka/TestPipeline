@@ -35,7 +35,7 @@ pipeline {
     }
     stage('Send email with test results - Selenium') {
       steps {
-        emailext(subject: 'Pipeline Test Results', body: '${FILE,path="target/surefire-reports/junitreports/html/finalreport/TESTS-TestSuites.html"} <br>  <h1>API Test Results</h1><br> ${FILE,path="results/html/JMeterResults.html"}', to: 'dragana.todorchevska@interworks.com.mk')
+        emailext(subject: 'Pipeline Test Results', body: '${FILE,path="target/surefire-reports/junitreports/html/finalreport/TESTS-TestSuites.html"} <br>  <br> ${FILE,path="results/html/JMeterResults.html"}', to: 'dragana.todorchevska@interworks.com.mk')
       }
     }
     stage('End') {

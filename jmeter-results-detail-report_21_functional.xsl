@@ -72,9 +72,9 @@
 			<xsl:call-template name="pageHeader" />
 			
 			<xsl:call-template name="summary" />
-			<hr size="1" width="95%" align="center"/> 			
+			<hr size="1"/> 			
 			<xsl:call-template name="pagelist" />
-			<hr size="1" width="95%" align="center" /> 
+			<hr size="1" /> 
 			
 			<xsl:call-template name="detail" />
 
@@ -184,10 +184,10 @@
 				<td>
 					<xsl:value-of select="$label" />
 				</td>
-				<td > <!--align="center"-->
+				<td align="center" > 
 					<xsl:value-of select="$count" />
 				</td>
-				<td > <!--align="center"-->
+				<td align="center"> 
 					<xsl:value-of select="$failureCount" />
 				</td>
 				<td align="right">

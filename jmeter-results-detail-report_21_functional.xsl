@@ -108,7 +108,7 @@
 			<xsl:variable name="allAverageTime" select="$allTotalTime div $allCount" />
 			<xsl:variable name="allThroughput" select="1000 * $allCount div ($finalTime - $startTime)" />
 			
-			<xsl:variable name="allMinTime">
+			<!--<xsl:variable name="allMinTime">
 				<xsl:call-template name="min">
 					<xsl:with-param name="nodes" select="/testResults/*/@t" />
 				</xsl:call-template>
@@ -118,7 +118,7 @@
 					<xsl:with-param name="nodes" select="/testResults/*/@t" />
 				</xsl:call-template>
 			</xsl:variable>
-			
+			-->
 			<xsl:attribute name="class">
 				<xsl:choose>
 					<xsl:when test="$allFailureCount &gt; 0">Failure</xsl:when>

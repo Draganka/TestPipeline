@@ -201,7 +201,7 @@
 						<xsl:with-param name="value" select="$averageTime" />
 					</xsl:call-template>
 				</td>
-				<td align="right">
+				<!--<td align="right">
 					<xsl:call-template name="display-time">
 						<xsl:with-param name="value" select="$minTime" />
 					</xsl:call-template>
@@ -211,6 +211,7 @@
 						<xsl:with-param name="value" select="$maxTime" />
 					</xsl:call-template>
 				</td>
+				-->
 			</tr>
 		</xsl:for-each>
 	</table>

@@ -220,7 +220,7 @@
     <tr valign="top">
       <th width="80%">Name</th>
       <th>Status</th>
-      <th>Type</th>
+      <!--<th>Type</th> -->
       <th nowrap="nowrap">Time(s)</th>
     </tr>
   </xsl:template>

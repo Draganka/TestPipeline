@@ -84,7 +84,7 @@
 </xsl:template>
 
 <xsl:template name="pageHeader">
-	<h1>API Test Results</h1>
+	<h1>Functional Test Results</h1>
 	<hr size="1" />
 </xsl:template>
 

@@ -249,7 +249,7 @@
 </xsl:template>
 
 
-<xsl:template name="min">
+<!--<xsl:template name="min">
 	<xsl:param name="nodes" select="/.." />
 	<xsl:choose>
 		<xsl:when test="not($nodes)">NaN</xsl:when>
@@ -278,7 +278,7 @@
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
-
+-->
 
 <xsl:template name="display-percent">
 	<xsl:param name="value" />

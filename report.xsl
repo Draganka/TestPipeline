@@ -194,7 +194,7 @@
 
   <xsl:template match="testsuite" mode="header">
     <tr valign="top">
-      <th width="80%">Name</th>
+      <th width="50%">Name</th>
       <th>Tests</th>
       <th>Errors</th>
       <th>Failures</th>

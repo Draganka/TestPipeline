@@ -136,7 +136,7 @@
   </xsl:template>
 
   <xsl:template name="summary">
-    <h2>Summary</h2>
+    <h3>Summary</h3>
     <xsl:variable name="testCount" select="sum(testsuite/@tests)" />
     <xsl:variable name="errorCount" select="sum(testsuite/@errors)" />
     <xsl:variable name="failureCount" select="sum(testsuite/@failures)" />

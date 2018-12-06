@@ -89,7 +89,7 @@
 </xsl:template>
 
 <xsl:template name="summary">
-	<h2>Summary</h2>
+	<h3>Summary</h3>
 	<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 		<tr valign="top">
 			<th># Samples</th>
@@ -144,7 +144,7 @@
 	</table>
 </xsl:template>
 <xsl:template name="pagelist">
-	<h2>Results per transaction</h2>
+	<h3>Results per transaction</h3>
 	<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 		<tr valign="top">
 			<th>Transaction Controller</th>
@@ -217,7 +217,7 @@
 	<xsl:variable name="allFailureCount" select="count(/testResults/*[attribute::s='false'])" />
 
 	<xsl:if test="$allFailureCount > 0">
-		<h2>Failure Detail</h2>
+		<h3>Failure Detail</h3>
 
 		<xsl:for-each select="/testResults/*[not(@lb = preceding::*/@lb)]">
 

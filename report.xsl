@@ -137,7 +137,7 @@
     </xsl:for-each>
   </xsl:template>
 
-  <!--
+
   <xsl:template name="summary">
     <h2>Summary</h2>
     <xsl:variable name="testCount" select="sum(testsuite/@tests)" />
@@ -189,7 +189,7 @@
     </table>
    
   </xsl:template>
-  -->
+
 
   <!-- Page HEADER -->
   <xsl:template name="pageHeader">

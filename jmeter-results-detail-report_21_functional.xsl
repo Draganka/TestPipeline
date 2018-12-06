@@ -154,8 +154,8 @@
 			<th>Failures</th>
 			<th>Success Rate</th>
 			<th>Average Time</th>
-			<th>Min Time</th>
-			<th>Max Time</th>
+			<!--<th>Min Time</th>
+			<th>Max Time</th>-->
 		</tr>
 		<xsl:for-each select="/testResults/*[not(@lb = preceding::*/@lb)]">
 			<xsl:variable name="label" select="@lb" />

@@ -97,7 +97,7 @@
         <xsl:value-of select="@package" />
       </h3>
 
-      <table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%" >
+      <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%" >
         <xsl:call-template name="testsuite.test.header" />
 
         <!-- match the testsuites of this package -->
@@ -143,7 +143,7 @@
     <xsl:variable name="skippedCount" select="sum(testsuite/@skipped)" />
     <xsl:variable name="timeCount" select="sum(testsuite/@time)" />
     <xsl:variable name="successRate" select="($testCount - $failureCount - $errorCount) div $testCount" />
-    <table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+    <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
       <tr valign="top">
         <th width="85%">Tests</th>
         <th>Failures</th>

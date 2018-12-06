@@ -165,7 +165,7 @@
 			<xsl:variable name="successPercent" select="$successCount div $count" />
 			<xsl:variable name="totalTime" select="sum(../*[@lb = current()/@lb]/@t)" />
 			<xsl:variable name="averageTime" select="$totalTime div $count" />
-			<xsl:variable name="minTime">
+			<!--<xsl:variable name="minTime">
 				<xsl:call-template name="min">
 					<xsl:with-param name="nodes" select="../*[@lb = current()/@lb]/@t" />
 				</xsl:call-template>
@@ -175,6 +175,7 @@
 					<xsl:with-param name="nodes" select="../*[@lb = current()/@lb]/@t" />
 				</xsl:call-template>
 			</xsl:variable>
+			-->
 			<tr valign="top">
 				<xsl:attribute name="class">
 					<xsl:choose>

@@ -72,10 +72,10 @@
 			<xsl:call-template name="pageHeader" />
 			
 			<xsl:call-template name="summary" />
-			<hr size="1" width="95%" align="center" />
+			<hr size="1" width="95%" /> <!-- align="center"-->
 			
 			<xsl:call-template name="pagelist" />
-			<hr size="1" width="95%" align="center" />
+			<hr size="1" width="95%" /> <!-- align="center"-->
 			
 			<xsl:call-template name="detail" />
 
